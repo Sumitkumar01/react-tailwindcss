@@ -1,6 +1,7 @@
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/home/HomePage';
+import Page2 from './pages/page2/Page2';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/page2',
-    element:<HomePage/>
+    element:<Page2/>
   },
   {
     path:'/page3',
