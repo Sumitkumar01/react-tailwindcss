@@ -1,42 +1,59 @@
-.nav_btn {
-  padding: 5px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  visibility: hidden;
-  opacity: 0;
-  font-size: 1.8rem;
+.mob-nv{
+  animation: fedLeft 1ms 1ms ease;
+  /* opacity: 0; */
 }
 
-@media (max-width:1024px) {
-  .nav_btn {
-    visibility: visible;
+@keyframes fedLeft {
+  from{
+  transform: translateX(0);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
     opacity: 1;
   }
+}
 
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    transition: 1s;
-    transform: translateY(-100vh);
+.active{
+  color: aliceblue;
+  background:#e98383 ;
+}
+
+input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  
+}
+
+input[type="date"]::-webkit-input-placeholder {
+  color: #999;
+  content: "checkin";
+}
+
+
+
+.c_conteiner{
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+
+@media (width<770px) {
+  .c_conteiner{
+    max-width: 720px;
+    margin: auto;
+    padding: 0 1rem;
   }
-
-  .res_nav {
-    transform: none;
+}
+@media (width<568px) {
+  .c_conteiner{
+    max-width: 100%;
+    margin: auto;
+    padding: 0 1rem;
   }
-
-  .nav_close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-  }
-
 }

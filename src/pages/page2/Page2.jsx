@@ -6,8 +6,8 @@ function Page2() {
   return (
     <>
       <NavBar />
-      <section className="">
-        <div className="max-w-[1320px] mx-auto bg-slate-600">
+      <section className="c_conteiner">
+        <div className=" ">
           <h1 className="text-3xl font-bold capitalize text-white center py-3 text-center">
             cards
           </h1>
@@ -29,6 +29,7 @@ function Page2() {
                 </h2>
               </div>
             ))}
+            <input type="date" name="" placeholder="seect" id="" />
           </div>
         </div>
       </section>
