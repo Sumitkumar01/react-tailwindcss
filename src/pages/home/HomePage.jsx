@@ -1,7 +1,10 @@
 import React from "react";
 import NavBar from "../../components/NavBar";
+import { useWebContext } from "../../context/ContextProvider";
 
 function HomePage() {
+  const {user} = useWebContext();
+  console.log(user)
   return (
     <>
       <header>
@@ -9,7 +12,11 @@ function HomePage() {
       </header>
       <main>
         <section className="py-6 bg-slate-200 ">
-          <div className="bg-yellow lg:container m-auto"> accordion </div>
+          <div className="bg-yellow lg:container m-auto"> 
+          <h1 className="text-3xl font-bold text-center">
+            {user?.username}
+          </h1>
+          </div>
         </section>
         <div className="c_conteiner py-8 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
           <div className="bg-gray-800 text-white text-justify p-3">

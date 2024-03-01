@@ -20,6 +20,8 @@ function Page2() {
                 <div className="overflow-hidden">
                   <img
                     src={item.url}
+                    loading="lazy"
+                    decoding="async"
                     className="w-[100%] hover:scale-125 h-[200px] duration-1000"
                     alt="card_img"
                   />

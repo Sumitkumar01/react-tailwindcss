@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink,Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 function NavBar() {
   const navigation = [
@@ -18,6 +18,14 @@ function NavBar() {
     <div className="relative">
       <div className="h-[7vh]  bg-indigo-700">
         <nav className="flex c_conteiner items-center justify-around h-[100%]">
+          <div className="w-full bg-transparent">
+            <Link
+              to="/"
+              className="font-bold text-xl text-slate-900 hover:text-white"
+            >
+              React context
+            </Link>
+          </div>
           <ul className="lg:flex hidden items-center justify-center gap-3">
             {navigation.map((item, i) => (
               <li key={i}>
@@ -30,9 +38,7 @@ function NavBar() {
               </li>
             ))}
           </ul>
-          <div className="w-full bg-transparent">
-            <Link to="/" className="font-bold text-xl text-slate-900 hover:text-white">React context</Link>
-          </div>
+
           <button className="text-2xl lg:hidden block p-3" onClick={showNavBar}>
             <FaBars className="hover:text-white" />
           </button>
@@ -41,8 +47,11 @@ function NavBar() {
 
       {open && (
         <nav className="bg-indigo-600 lg:hidden block p-3 absolute top-0 w-[90%] right-0 h-[100vh] z-10 mob-nv">
-          <button className="text-2xl p-3 hover:text-white  text-right" onClick={showNavBar}>
-            <FaTimes className=""/>
+          <button
+            className="text-2xl p-3 hover:text-white  text-right"
+            onClick={showNavBar}
+          >
+            <FaTimes className="" />
           </button>
           <ul className="bg-indigo-600 w-full">
             {navigation.map((item, i) => (
